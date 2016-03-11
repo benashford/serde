@@ -14,14 +14,14 @@ build = "build.rs"
 nightly-testing = ["clippy", "serde/nightly-testing", "serde_codegen/nightly-testing"]
 
 [build-dependencies]
-syntex = { git = "https://github.com/benashford/syntex" }
-syntex_syntax = { git = "https://github.com/benashford/syntex" }
+syntex = { git = "https://github.com/benashford/syntex", branch = "experimental" }
+syntex_syntax = { git = "https://github.com/benashford/syntex", branch = "experimental" }
 serde_codegen = { version = "*", path = "../serde_codegen", features = ["with-syntex"] }
 
 [dev-dependencies]
 rustc-serialize = "^0.3.16"
 serde = { version = "*", path = "../serde" }
-syntex = { git = "https://github.com/benashford/syntex" }
+syntex = { git = "https://github.com/benashford/syntex", branch = "experimental" }
 
 [dependencies]
 clippy = { version = "^0.*", optional = true }
