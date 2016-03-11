@@ -469,7 +469,7 @@ fn parse_lit_into_path(cx: &ExtCtxt, name: &str, lit: &ast::Lit) -> Result<ast::
         cx.parse_sess());
 
     // Respan the spans to say they are all coming from this macro.
-    let tts = Respanner { cx: cx }.fold_tts(&tts);
+    let tts = Respanner { cx: cx }.fold_tts(&tts.expect("tts"));
 
     let mut parser = parse::new_parser_from_tts(cx.parse_sess(), cx.cfg(), tts);
 
